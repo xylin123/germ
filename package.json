@@ -1,0 +1,31 @@
+{
+  "name": "seed-node",
+  "version": "0.0.0",
+  "description": "一个基于express的node种子项目",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint app.js routes/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xylin123/seed-node.git"
+  },
+  "author": "xylin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xylin123/seed-node/issues"
+  },
+  "homepage": "https://github.com/xylin123/seed-node#readme",
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.12.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  }
+}
