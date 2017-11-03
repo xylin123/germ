@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
+const expressWs = require('express-ws')(app);
 
 const routes = require('./routes/routes');
 
@@ -21,6 +22,10 @@ app.all('*', (req, res, next) => {
   else next();
 });
 
+app.get('/', (req, res, next) => {
+  res.redirect(302, '/index.html');
+});
+
 // 路由
 Object.keys(routes).forEach((key) => {
   app.use(key, routes[key]);
@@ -31,7 +36,7 @@ app.use((err, req, res, next) => {
   next();
 });
 
-const server = app.listen(8082, () => {
+const server = app.listen(3000, () => {
   const host = server.address().address;
   const port = server.address().port;
 
